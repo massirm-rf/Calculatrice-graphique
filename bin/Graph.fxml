@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controleur">
+   <children>
+      <AreaChart fx:id="area" layoutX="24.0" layoutY="32.0" prefHeight="405.0" prefWidth="299.0" title="AreaChart">
+        <xAxis>
+          <NumberAxis autoRanging="false" label="X" minorTickCount="10" side="BOTTOM" tickLabelGap="2.0" tickLabelRotation="1.0" tickLength="1.0" tickUnit="1.0" upperBound="10.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Y" minorTickCount="10" side="LEFT" upperBound="10.0" />
+        </yAxis>
+      </AreaChart>
+      <LineChart fx:id="line" layoutX="313.0" layoutY="29.0" prefHeight="412.0" prefWidth="288.0" title="LineChart">
+        <xAxis>
+          <NumberAxis autoRanging="false" label="X" minorTickCount="10" side="BOTTOM" tickLabelGap="2.0" tickLabelRotation="1.0" tickLength="1.0" tickUnit="1.0" upperBound="10.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Y" minorTickCount="10" side="LEFT" tickLabelGap="1.0" upperBound="10.0" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

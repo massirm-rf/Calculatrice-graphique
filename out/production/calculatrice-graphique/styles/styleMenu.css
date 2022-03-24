@@ -1,0 +1,32 @@
+.operandes{
+    -fx-background-color : rgb(128, 128, 128);
+    -fx-font-size : 15px;
+}
+
+.operateurs{
+    -fx-background-color : #336BFF;
+    -fx-text-fill : rgb(255, 255, 255);
+    -fx-font-size : 15px;
+    -fx-font-weight : bolder;
+}
+.btn{
+    -fx-font-size : 13px;
+}
+
+.operateurs:hover{
+    -fx-background-color : rgba(51, 107, 255,0.5);
+}
+
+.operandes:hover{
+    -fx-background-color : rgba(128, 128, 128,0.5);
+}
+
+.btn:hover{
+    -fx-background-color : rgba(255, 255, 255,0.5);
+}
+
+#err{
+    -fx-text-fill : red;
+    -fx-font-size : 16px;
+}
+

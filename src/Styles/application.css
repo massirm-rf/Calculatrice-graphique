@@ -1,0 +1,147 @@
+
+.chart {
+    -fx-padding: 10px;
+}
+.chart-content {
+    -fx-padding: 30px;    
+}
+ 
+.chart-title {
+  -fx-text-fill: #4682b4;
+  -fx-font-size: 1.6em;
+}
+ 
+.axis-label {
+  -fx-text-fill: #4682b4;
+}
+ 
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+ 
+.chart-legend-item-symbol{
+   -fx-background-radius: 0;
+}
+ 
+.chart-legend-item{
+    -fx-text-fill: #191970;
+}
+ 
+.chart-plot-background {
+    -fx-background-color: #e2ecfe;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: grey
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: grey
+}
+.chart-alternative-row-fill {
+    -fx-fill: #99bcfd;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+/*  */
+.root{
+	-fx-font-size: 16pt;
+    -fx-font-family: "Courier New";
+	}
+.graphique {
+    -fx-padding: 30px;
+}
+.chart-content {
+    -fx-padding: 30px;
+}
+ 
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.axis {
+    -fx-font-size: 1,4em;    
+    -fx-tick-label-fill: #000000;
+    -fx-font-famille: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+.axis-tick-mark { 
+    -fx-stroke: #302b2b;
+    -fx-stroke-width: 3;  
+} 
+.axis-minor-tick-mark { 
+    -fx-stroke: #302b2b; 
+}
+.button{
+	-fx-font-weight : bold;
+	-fx-background-color: #008080;
+	-fx-background-radius: 22;
+	-fx-font-size: 12;
+	-fx-text-fill: black;
+	} 
+.button:hover{
+	-fx-font-weight : bold;
+	-fx-background-color: white;
+	-fx-background-radius: 22;
+	-fx-font-size: 12;
+	-fx-text-fill: #008080;
+	-fx-border-color: #008080;
+	-fx-border-radius:20;
+	}
+.button:pressed{
+	-fx-font-weight : bold;
+	-fx-background-color: white;
+	-fx-background-radius: 22;
+	-fx-font-size: 12;
+	-fx-text-fill: #008080;
+	-fx-border-color: #008080;
+	-fx-border-radius:20;
+	-fx-border-width: 3;
+	-fx-rotate: 10;
+	}
+.text-field{
+		-fx-border-color: #008080;
+		-fx-background-radius: 15;
+        -fx-border-radius: 15;
+		-fx-pref-column-count: 25;
+		-fx-border-width: 2px;
+		-fx-font-weight : bold;
+	    -fx-font-size: 12;
+		-fx-text-fill: black;
+		
+	}
+	.text-field .scroll-pane {
+        -fx-background-color: transparent;
+    }
+    .text-field .scroll-pane .viewport{
+        -fx-background-color: transparent;
+    }
+    .text-field .scroll-pane .content{
+        -fx-background-color: transparent;
+    }
+.label{
+	-fx-font-family: "Courier New";
+	-fx-font-weight : bold;
+	-fx-font-size: 16;
+	-fx-font-color: #008080;
+}
+.text-area{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #008080;
+    -fx-font-weight : bold;
+	-fx-font-size: 12;
+    -fx-text-fill: black;
+    -fx-border-width: 2px;
+    -fx-pref-column-count: 25;	
+	}
+.text-area .scroll-pane {
+        -fx-background-color: transparent;
+    }
+.text-area .scroll-pane .viewport{
+        -fx-background-color: transparent;
+    }
+.text-area .scroll-pane .content{
+        -fx-background-color: transparent;
+    }

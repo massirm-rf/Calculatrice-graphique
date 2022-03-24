@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene fx:id="root" stylesheets="@../Styles/application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatriceControler">
+    <BorderPane prefHeight="715.0" prefWidth="1006.0">
+        <center>
+            <LineChart fx:id="chart" alternativeColumnFillVisible="false" alternativeRowFillVisible="false" animated="true" createSymbols="false" horizontalGridLinesVisible="true" legendVisible="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="463.0" title="G R A P H E" BorderPane.alignment="CENTER">
+                <xAxis>
+                    <NumberAxis fx:id="XAxis" animated="true" autoRanging="false" lowerBound="-50" minorTickCount="4" side="BOTTOM" upperBound="50" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="YAxis" animated="true" autoRanging="false " lowerBound="-50" minorTickCount="4" side="LEFT" upperBound="50" />
+                </yAxis>
+                <cursor>
+                    <Cursor fx:constant="DEFAULT" />
+                </cursor>
+            </LineChart>
+        </center>
+        <top>
+            <HBox alignment="CENTER_RIGHT" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="39.0" prefWidth="1006.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+                <children>
+                    <Button fx:id="reduire" minWidth="32.0" mnemonicParsing="false" onAction="#Reduire" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/minus.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="redimention" minWidth="32.0" mnemonicParsing="false" onAction="#Redimentionnement" prefHeight="45.0" prefWidth="42.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/square.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="quitter2" minWidth="32.0" mnemonicParsing="false" onAction="#Quitter" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/close.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </children></HBox>
+        </top>
+        <left>
+            <AnchorPane prefHeight="672.0" prefWidth="244.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Label alignment="TOP_CENTER" layoutX="15.0" layoutY="14.0" prefHeight="27.0" prefWidth="170.0" text="F(x) :" textFill="#008080">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <TextArea fx:id="txt" layoutX="8.0" layoutY="36.0" prefHeight="22.0" prefWidth="186.0" />
+                    <GridPane layoutX="9.0" layoutY="523.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="200.0" minWidth="8.800021171569824" prefWidth="95.20001220703125" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="191.19997882843018" minWidth="0.0" prefWidth="104.79998779296875" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label contentDisplay="CENTER" text="min" textFill="TEAL" />
+                            <Label text="max" textAlignment="CENTER" textFill="TEAL" GridPane.columnIndex="1" />
+                            <TextField fx:id="iMin3" prefHeight="26.0" prefWidth="60.0" promptText="-10" GridPane.rowIndex="1" />
+                            <TextField fx:id="iMax3" prefHeight="26.0" prefWidth="60.0" promptText="10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        </children>
+                    </GridPane>
+                    <Button fx:id="tracer" layoutX="14.0" layoutY="158.0" minWidth="45.0" mnemonicParsing="false" onAction="#action0" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;" textAlignment="CENTER">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/check.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Tracer le graphe" />
+                  </tooltip>
+                    </Button>
+                    <Label alignment="TOP_CENTER" layoutX="16.0" layoutY="216.0" prefHeight="27.0" prefWidth="170.0" text="G(x) :" textFill="#008080">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <TextArea fx:id="txt2" layoutX="6.0" layoutY="244.0" prefHeight="38.0" prefWidth="186.0" />
+                    <GridPane layoutX="10.0" layoutY="315.0" prefHeight="57.0" prefWidth="200.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints maxHeight="33.600006103515625" minHeight="0.0" prefHeight="29.600006103515625" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="31.999993896484376" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label contentDisplay="CENTER" text="min" textFill="TEAL" />
+                            <Label contentDisplay="CENTER" text="max" textFill="TEAL" GridPane.columnIndex="1" />
+                            <HBox prefHeight="27.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <children>
+                                    <TextField fx:id="iMax2" prefHeight="26.0" prefWidth="95.0" promptText="10" />
+                                </children>
+                            </HBox>
+                            <TextField fx:id="iMin2" prefHeight="26.0" prefWidth="42.0" promptText="-10" GridPane.rowIndex="1" />
+                        </children>
+                    </GridPane>
+                    <Button fx:id="sup2" layoutX="137.0" layoutY="394.0" minWidth="45.0" mnemonicParsing="false" onAction="#suppGraph2" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/trash.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Supprimer la fonction" />
+                  </tooltip>
+                    </Button>
+                    <Label alignment="TOP_CENTER" layoutX="8.0" layoutY="451.0" prefHeight="27.0" prefWidth="170.0" text="H(x):" textFill="#008080">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <TextArea fx:id="txt3" layoutX="6.0" layoutY="479.0" prefHeight="0.0" prefWidth="186.0" />
+                    <GridPane layoutX="9.0" layoutY="86.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label contentDisplay="CENTER" text="min" textFill="TEAL" />
+                            <Label contentDisplay="CENTER" text="max" textFill="TEAL" GridPane.columnIndex="1" />
+                            <TextField fx:id="iMin1" promptText="-10" GridPane.rowIndex="1" />
+                            <TextField fx:id="iMax1" promptText="10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        </children>
+                    </GridPane>
+                    <Button fx:id="tracer3" layoutX="14.0" layoutY="595.0" minWidth="45.0" mnemonicParsing="false" onAction="#action2" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/check.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Tracer le graphe" />
+                  </tooltip>
+                    </Button>
+                    <Button fx:id="sauv1" layoutX="83.0" layoutY="157.0" minWidth="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/floppy-disk.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Enregistrer la fonction" />
+                  </tooltip></Button>
+                    <Button fx:id="sup" layoutX="146.0" layoutY="158.0" minWidth="45.0" mnemonicParsing="false" onAction="#suppGraph" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/trash.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Supprimer la fonction" />
+                  </tooltip>
+                    </Button>
+                    <Button fx:id="sauv2" layoutX="73.0" layoutY="394.0" minWidth="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/floppy-disk.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Enregistrer la fonction" />
+                  </tooltip>
+                    </Button>
+                    <Button fx:id="tracer2" layoutX="14.0" layoutY="394.0" minWidth="45.0" mnemonicParsing="false" onAction="#action1" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/check.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Tracer le graphe" />
+                  </tooltip>
+                    </Button>
+                    <Button fx:id="sauv3" layoutX="73.0" layoutY="595.0" minWidth="45.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/floppy-disk.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Enregistrer la fonction" />
+                  </tooltip>
+                    </Button>
+                    <Button fx:id="sup3" layoutX="137.0" layoutY="595.0" minWidth="45.0" mnemonicParsing="false" onAction="#suppGraph3" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: #f5fffa;">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/trash.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                  <tooltip>
+                     <Tooltip text="Supprimer la fonction" />
+                  </tooltip>
+                    </Button>
+                </children>
+            </AnchorPane>
+        </left>
+        <right>
+            <AnchorPane minWidth="-Infinity" prefHeight="644.0" prefWidth="99.0" BorderPane.alignment="TOP_CENTER">
+                <children>
+                    <VBox layoutX="-1.0" layoutY="116.0" prefHeight="199.0" prefWidth="123.0">
+                        <children>
+                            <Button fx:id="auto" mnemonicParsing="false" onAction="#autoZoom" prefHeight="32.0" prefWidth="96.0" text="AutoZoom">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Button>
+                            <Separator prefHeight="14.0" prefWidth="90.0" />
+                            <Button fx:id="nouveau" mnemonicParsing="false" onAction="#NouvellePage" prefHeight="32.0" prefWidth="96.0" text="Nouveau">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                        <tooltip>
+                           <Tooltip text="Réinitialiser le contenu de la fentre" />
+                        </tooltip>
+                            </Button>
+                            <Separator prefHeight="14.0" prefWidth="104.0" />
+                            <Button fx:id="historique" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Historique">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Button>
+                            <Separator prefHeight="14.0" prefWidth="104.0" />
+                            <Button fx:id="quitter" mnemonicParsing="false" onAction="#Quitter" prefHeight="32.0" prefWidth="96.0" text="Quitter">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Button>
+                        </children>
+                    </VBox>
+                    <Line fx:id="indCF" endX="-80.0" layoutX="88.0" layoutY="357.0" startX="-100.0" stroke="BLUE" strokeWidth="3.0" visible="false" />
+                    <Line fx:id="indCH" endX="-80.0" layoutX="89.0" layoutY="398.0" startX="-100.0" stroke="RED" strokeWidth="3.0" visible="false" />
+                    <Line fx:id="indCG" endX="-80.0" layoutX="89.0" layoutY="378.0" startX="-100.0" stroke="#438343" strokeWidth="3.0" visible="false" />
+                    <Text fx:id="indF" layoutX="14.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F(x)" visible="false">
+                        <font>
+                            <Font size="12.0" />
+                        </font>
+                    </Text>
+                    <Text fx:id="indG" layoutX="13.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G(x)" visible="false">
+                        <font>
+                            <Font size="12.0" />
+                        </font>
+                    </Text>
+                    <Text fx:id="indH" layoutX="13.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H(x)" visible="false">
+                        <font>
+                            <Font size="12.0" />
+                        </font>
+                    </Text>
+                </children>
+            </AnchorPane>
+        </right>
+    </BorderPane>
+</Scene>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene stylesheets="@../styles/styleMenu.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controleur">
+    <AnchorPane prefHeight="600.0" prefWidth="800.0">
+      <children>
+         <BorderPane prefHeight="600.0" prefWidth="800.0">
+            <center>
+               <StackPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/calc.jpg" />
+                        </image>
+                     </ImageView>
+                     <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <children>
+                           <HBox layoutX="184.0" layoutY="87.0" spacing="10.0">
+                              <children>
+                                 <Label text="Veuillez saisir une fonction : ">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                    <font>
+                                       <Font name="System Bold Italic" size="13.0" />
+                                    </font>
+                                 </Label>
+                                 <TextField fx:id="txt" />
+                                 <Button fx:id="tracer" mnemonicParsing="false" onAction="#tracer" prefHeight="26.0" prefWidth="68.0" styleClass="btn" text="Tracer" />
+                              </children>
+                           </HBox>
+                           <VBox layoutX="221.0" layoutY="100.0" prefHeight="200.0" prefWidth="315.0">
+                              <children>
+                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                       <Button layoutX="75.0" layoutY="91.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="279.0" styleClass="btn" text="Autres fonctionnalités" />
+                                       <GridPane layoutX="14.0" layoutY="128.0" prefHeight="298.0" prefWidth="434.0">
+                                         <columnConstraints>
+                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="0.0" prefWidth="0.0" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints hgrow="SOMETIMES" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                         </columnConstraints>
+                                         <rowConstraints>
+                                           <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                             <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                           <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="0.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                         </rowConstraints>
+                                          <children>
+                                             <Button maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="x" fx:id="xBtn" />
+                                             <Button fx:id="btn9" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="9" GridPane.columnIndex="8" />
+                                             <Button fx:id="btn8" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="8" GridPane.columnIndex="7" />
+                                             <Button fx:id="btn7" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="7" GridPane.columnIndex="6" />
+                                             <Button maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="x²" GridPane.columnIndex="5" />
+                                             <Button fx:id="powBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="x^b" GridPane.columnIndex="3" />
+                                             <Button fx:id="sqBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="a²" GridPane.columnIndex="1" />
+                                             <Button fx:id="btn5" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="5" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                             <Button fx:id="btn4" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="4" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                             <Button fx:id="piBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="π" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                             <Button fx:id="racBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="√" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                             <Button fx:id="prFerBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             <Button fx:id="prOuvBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="(" GridPane.rowIndex="1" />
+                                             <Button fx:id="sinBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="sin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             <Button fx:id="tanBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="tan" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                             <Button fx:id="cosBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="cos" GridPane.rowIndex="2" />
+                                             <Button fx:id="btn6" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="6" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                                             <Button fx:id="absBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="|a|" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                             <Button fx:id="logBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="log" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                             <Button fx:id="lnBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="ln" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             <Button fx:id="eBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="exp" GridPane.rowIndex="3" />
+                                             <Button fx:id="btn3" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="3" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                                             <Button fx:id="btn2" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="2" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                             <Button fx:id="btn1" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="1" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                             <Button fx:id="virBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="btn" text="," GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                             <Button fx:id="eqBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operateurs" text="=" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                                             <Button fx:id="dotBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="." GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                             <Button fx:id="btn0" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operandes" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                             <Button fx:id="plusBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operateurs" text="+" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                             <Button fx:id="moinBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operateurs" text="-" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                             <Button fx:id="multBtn" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" styleClass="operateurs" text="*" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                             <Button fx:id="divBtn" maxHeight="45.0" maxWidth="45.0" minHeight="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="45.0" styleClass="operateurs" text="/" GridPane.columnIndex="9" />
+                                          </children>
+                                       </GridPane>
+                                       <Label id="err" fx:id="warning" layoutX="187.0" layoutY="28.0" mnemonicParsing="true" prefHeight="23.0" prefWidth="167.0" text="Format non valide !" visible="false" />
+                                    </children>
+                                 </AnchorPane>
+                              </children>
+                           </VBox>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </StackPane>
+            </center>
+         </BorderPane>
+      </children></AnchorPane>
+</Scene>

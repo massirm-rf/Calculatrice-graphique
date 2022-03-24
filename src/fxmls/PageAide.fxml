@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene fx:id="root" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AideControler">
+         <BorderPane prefHeight="715.0" prefWidth="1006.0">
+            <top>
+               <AnchorPane fx:id="TitbleBar" nodeOrientation="RIGHT_TO_LEFT" onMouseDragged="#Dragged" onMousePressed="#Pressed" prefHeight="39.0" prefWidth="1167.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+                  <children>
+                     <Button fx:id="quitter" layoutX="-5.0" layoutY="6.0" minWidth="32.0" mnemonicParsing="false" onAction="#Quitter" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <graphic>
+                           <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/close.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                     <Button fx:id="redimention" layoutX="28.0" layoutY="-3.0" minWidth="32.0" mnemonicParsing="false" onAction="#Redimentionnement" prefHeight="45.0" prefWidth="42.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <graphic>
+                           <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/square.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                     <Button fx:id="reduire" layoutX="54.0" layoutY="-1.0" minWidth="32.0" mnemonicParsing="false" onAction="#Reduire" prefHeight="38.0" prefWidth="55.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <graphic>
+                           <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/minus.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                  </children>
+               </AnchorPane>
+            </top>
+      <left>
+               <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <Label alignment="TOP_CENTER" layoutX="320.0" layoutY="-5.0" prefHeight="41.0" prefWidth="358.0" text="PAGE D'AIDE" textFill="TEAL">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+               <Text layoutX="4.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'application est une calcultarice graphique qui vous permettra de dessiner le graphe d'une fonction mathématique. Vous pourriez dessiner jusqu'à trois fonctions sur un même repère." wrappingWidth="993.8203125">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Text>
+               <Text layoutX="8.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ceci est une aide de prise en main de l'application.">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Text>
+               <Text fill="TEAL" layoutX="8.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode d'utilisation : " wrappingWidth="158.67007446289062">
+                  <font>
+                     <Font size="17.0" />
+                  </font>
+               </Text>
+               <Text layoutX="2.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Cliquez sur le bouton 'Connexion' pour vous identifier.&#10;- Entrez une expression valide de fonction dans les champs F(x), G(x) et H(x).&#10;- Entrez des intervalles de définition pour vos fonctions (facultatif).&#10;- Utilisez les boutons en dessous des fonctions afin de tracer le graphe, le supprimer ou enregistrer votre fonction.&#10;- Retrouvez vos fonctions enregistrées dans votre historique en cliquant sur le bouton 'Historique'.&#10;- Seléctionnez la fonction de votre historique que vous voulez recharger dans le champs F(x) afin de retracer son graphe.&#10;- Utilisez le bouton 'Nouveau' pour créer une nouvelle page.&#10;- Vous pouvez effectuer un zoom, dézoom et panning sur la zone du traçage du graphe ou sur l'axe X ou Y.&#10;- Revenez à l'état initial du graphe en utilisant le bouton 'AutoZoom'.&#10;- Si vous souhaitez quitter l'application cliquez sur le bouton 'Quitter'.">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Text>
+               <VBox layoutX="14.0" layoutY="341.0" prefHeight="335.0" prefWidth="590.0">
+                  <children>
+                     <HBox prefHeight="33.0" prefWidth="126.0">
+                        <children>
+                           <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/check.png" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de tracer le graphe de la fonction" wrappingWidth="376.0035095214844">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="34.0" prefWidth="471.0">
+                        <children>
+                           <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/floppy-disk.png" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet d'enregistrer le graphe de la fonction dans l'historique" wrappingWidth="481.4334726333618">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="33.0" prefWidth="471.0">
+                        <children>
+                           <ImageView fitHeight="31.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/trash.png" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de supprimer le graphe de la fonction">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="37.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="49.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/autozoom.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de retourner à l'état initial des graphes avant le zoom">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="39.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="32.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/nouveau.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="    Permet de créer une nouvelle page">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="34.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="31.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/quitter.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de quitter l'application">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="34.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="24.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/historique.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de d'ouvrir l'historique">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="42.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="31.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/connexion.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet de s'identifier">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="44.0" prefWidth="590.0">
+                        <children>
+                           <ImageView fitHeight="32.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/aide.PNG" />
+                              </image>
+                           </ImageView>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     Permet d'ccéder à l'aide">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <Text fill="TEAL" layoutX="8.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boutons :">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Text>
+                  </children>
+               </AnchorPane>
+      </left></BorderPane>
+</Scene>
